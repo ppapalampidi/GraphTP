@@ -8,7 +8,7 @@ In this work, we aim at identifying the most important scenes in a movie in orde
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ppapalampidi/GraphTP/master/graphtp_in_sections.png" height="200">
+  <img src="https://raw.githubusercontent.com/ppapalampidi/GraphTP/master/graphtp_in_sections.png" height="400">
 </p>
 
 ## Dataset
