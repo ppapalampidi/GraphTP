@@ -1,0 +1,36 @@
+checkpoint_interval: 5000
+eval_interval: 1
+log_interval: 1
+batch_size: 1
+epochs: 20
+num_workers: 1
+optim: adam
+model_name: 'GraphTP'
+data:
+  folder: '../../../data/TRIPOD_multimodal_features/'
+  output_folder: '../outputs/'
+  train_labels: '../dataset/silver_distributions_train.pickle'
+  test_labels: '../dataset/gold_labels_test.pkl'
+  encoder: USE
+  binary: True # binary or ordinal labels per scene
+  max_scene_sent_length: 20
+  max_scene_length: 80
+  tensorboard_outputs: '../../../tensorboard_outputs/'
+model:
+  clip: 0.1
+  name: GraphTP # GraphTP or TAM
+  type: multimodal # multimodal or text-only
+
+  input_size: 512
+  audio_size: 521
+  vision_size: 2048
+
+  scene_encoder_size: 64
+  scene_encoder_layers: 1
+  scene_encoder_dropout: 0.0
+  scene_encoder_bidirectional: True
+
+  script_encoder_size: 64
+  script_encoder_layers: 1
+  script_encoder_dropout: 0.0
+  script_encoder_bidirectional: True
